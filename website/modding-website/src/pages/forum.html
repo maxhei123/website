@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum - ModHub</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-cube"></i> ModHub</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="mods.html"><i class="fas fa-puzzle-piece"></i> Mods</a></li>
+                    <li><a href="forum.html" class="active"><i class="fas fa-comments"></i> Forum</a></li>
+                    <li><a href="#" class="login-btn"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="hero-section">
+        <div class="container">
+            <h2>Community Forums</h2>
+            <div class="search-bar">
+                <input type="text" id="forum-search" placeholder="Search discussions...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <main class="container">
+        <div class="forum-layout">
+            <aside class="forum-sidebar">
+                <div class="forum-categories">
+                    <h3><i class="fas fa-folder"></i> Categories</h3>
+                    <ul>
+                        <li><a href="#" class="active">All Discussions</a></li>
+                        <li><a href="#">Mod Releases</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Tutorials</a></li>
+                        <li><a href="#">Suggestions</a></li>
+                    </ul>
+                </div>
+                <div class="forum-stats">
+                    <h3><i class="fas fa-chart-bar"></i> Statistics</h3>
+                    <ul>
+                        <li><i class="fas fa-users"></i> <span>1,234</span> Members</li>
+                        <li><i class="fas fa-comments"></i> <span>5,678</span> Posts</li>
+                        <li><i class="fas fa-clock"></i> <span>123</span> Active Users</li>
+                    </ul>
+                </div>
+            </aside>
+
+            <section class="forum-main">
+                <div class="forum-controls">
+                    <button class="primary-btn" id="new-thread-btn">
+                        <i class="fas fa-plus"></i> New Thread
+                    </button>
+                    <div class="forum-sort">
+                        <select id="sort-threads">
+                            <option value="recent">Most Recent</option>
+                            <option value="popular">Most Popular</option>
+                            <option value="unanswered">Unanswered</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div id="thread-list" class="thread-grid">
+                    <!-- Thread cards will be dynamically loaded here -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Modal for new thread -->
+    <div id="thread-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Create New Thread</h2>
+            <form id="thread-form">
+                <div class="form-group">
+                    <label for="thread-category">Category</label>
+                    <select id="thread-category" required>
+                        <option value="">Select a category</option>
+                        <option value="mod-releases">Mod Releases</option>
+                        <option value="support">Support</option>
+                        <option value="tutorials">Tutorials</option>
+                        <option value="suggestions">Suggestions</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="thread-title">Title</label>
+                    <input type="text" id="thread-title" required>
+                </div>
+                <div class="form-group">
+                    <label for="thread-content">Content</label>
+                    <textarea id="thread-content" rows="6" required></textarea>
+                </div>
+                <button type="submit" class="primary-btn">Create Thread</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ModHub</h3>
+                    <p>Your ultimate destination for game modifications</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ModHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
